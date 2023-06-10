@@ -37,6 +37,6 @@ public class Product implements Serializable{
 	
 //	if i add json ignore here it will ignore orders so if we have to fetch orders we don't include here
 //	@JsonIgnore
-	@OneToMany(mappedBy = "orderPk.product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "orderPk.product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Order> orders;
 }
